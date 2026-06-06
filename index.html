@@ -226,22 +226,28 @@ padding:15px;
 
 /* CLIENTES */
 
-.clients{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-}
-
 .client-box{
 background:white;
-height:120px;
+height:140px;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 border-radius:10px;
 box-shadow:0 4px 15px rgba(0,0,0,.08);
-font-weight:600;
-color:#777;
+padding:15px;
+}
+
+.client-box img{
+max-width:100%;
+max-height:90px;
+object-fit:contain;
+filter:grayscale(100%);
+transition:.3s;
+}
+
+.client-box img:hover{
+filter:none;
+transform:scale(1.05);
 }
 
 /* CONTACT */
