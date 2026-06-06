@@ -1,15 +1,579 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>MARCOR LABORATORIO</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MARCOR LABORATORIO DE SUELOS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8f8f8;
+color:#222;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#ffffff;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:55px;
+}
+
+.logo span{
+font-weight:700;
+font-size:18px;
+color:#111;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#111;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#e30613;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('images/proyecto.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+color:white;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero h1{
+font-size:56px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#e30613;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#b8000d;
+}
+
+/* SECTIONS */
+
+section{
+padding:90px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:38px;
+color:#111;
+}
+
+.section-title p{
+color:#666;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:12px;
+}
+
+.about-text h3{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.about-text p{
+line-height:1.8;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.service-card:hover{
+transform:translateY(-5px);
+}
+
+.service-card h3{
+margin-bottom:20px;
+color:#e30613;
+}
+
+.service-card ul{
+padding-left:20px;
+line-height:1.8;
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.project{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.project img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.project h4{
+padding:15px;
+}
+
+/* CLIENTES */
+
+.clients{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.client-box{
+background:white;
+height:120px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+font-weight:600;
+color:#777;
+}
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.contact-card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.contact-card h3{
+margin-bottom:20px;
+color:#e30613;
+}
+
+.contact-card p{
+margin-bottom:12px;
+}
+
+iframe{
+width:100%;
+height:400px;
+border:none;
+border-radius:12px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:32px;
+text-decoration:none;
+color:white;
+box-shadow:0 5px 15px rgba(0,0,0,.25);
+z-index:999;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:36px;
+}
+
+.about,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+nav ul{
+gap:15px;
+font-size:14px;
+}
+
+.logo span{
+display:none;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-<h1>MARCOR LABORATORIO</h1>
+<header>
+<div class="container navbar">
+
+<div class="logo">
+<img src="images/logo.png" alt="MARCOR">
+<span>MARCOR LABORATORIO DE SUELOS</span>
+</div>
+
+<nav>
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#servicios">Servicios</a></li>
+<li><a href="#proyectos">Proyectos</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+
+</div>
+</header>
+
+<section class="hero" id="inicio">
+
+<div class="container hero-content">
+
+<h1>MARCOR LABORATORIO DE SUELOS</h1>
 
 <p>
-Página web en construcción.
+Estudios Geotécnicos, Ensayos de Laboratorio y Control de Calidad para proyectos de construcción en la ciudad de Arequipa.
 </p>
+
+<a href="https://wa.me/51986192532" class="btn">
+Solicitar Cotización
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Nosotros</h2>
+<p>Comprometidos con la calidad y la ingeniería geotécnica.</p>
+</div>
+
+<div class="about">
+
+<img src="images/calicata.jpg">
+
+<div class="about-text">
+
+<h3>Especialistas en Mecánica de Suelos</h3>
+
+<p>
+Brindamos servicios de estudios geotécnicos, ensayos de laboratorio y control de calidad para proyectos de vivienda, edificaciones, pavimentos y obras civiles.
+</p>
+
+<p>
+Nuestro objetivo es proporcionar información confiable para el diseño seguro y eficiente de cada proyecto.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="servicios">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Servicios</h2>
+<p>Soluciones integrales para construcción y geotecnia.</p>
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<h3>Estudios Geotécnicos</h3>
+
+<ul>
+<li>EMS para cimentaciones</li>
+<li>EMS para pavimentación</li>
+<li>Estudio de canteras</li>
+<li>Excavación de calicatas</li>
+</ul>
+
+</div>
+
+<div class="service-card">
+
+<h3>Ensayos de Laboratorio</h3>
+
+<ul>
+<li>Análisis granulométricos</li>
+<li>Límites de Atterberg</li>
+<li>Contenido de humedad</li>
+<li>Corte directo</li>
+<li>Proctor estándar y modificado</li>
+<li>CBR</li>
+<li>Compresión simple</li>
+<li>Diseño de mezclas</li>
+</ul>
+
+</div>
+
+<div class="service-card">
+
+<h3>Control de Calidad</h3>
+
+<ul>
+<li>Densidad In Situ</li>
+<li>Extracción de diamantinas</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="proyectos">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Proyectos</h2>
+<p>Experiencia en campo y laboratorio.</p>
+</div>
+
+<div class="projects">
+
+<div class="project">
+<img src="images/calicata.jpg">
+<h4>Estudio de Mecánica de Suelos</h4>
+</div>
+
+<div class="project">
+<img src="images/densidad.jpg">
+<h4>Control de Calidad - Densidad In Situ</h4>
+</div>
+
+<div class="project">
+<img src="images/proyecto.jpg">
+<h4>Excavación de Calicatas</h4>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Nuestros Clientes</h2>
+<p>Espacio preparado para agregar clientes progresivamente.</p>
+</div>
+
+<div class="clients">
+
+<div class="client-box">CLIENTE 01</div>
+<div class="client-box">CLIENTE 02</div>
+<div class="client-box">CLIENTE 03</div>
+<div class="client-box">CLIENTE 04</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contacto">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Contacto</h2>
+<p>Solicita una cotización sin compromiso.</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>Información de Contacto</h3>
+
+<p><strong>Empresa:</strong> MARCOR LABORATORIO DE SUELOS</p>
+
+<p><strong>WhatsApp:</strong> 986 192 532</p>
+
+<p><strong>Correo:</strong> marcorconstructora@gmail.com</p>
+
+<p><strong>Dirección:</strong><br>
+Calle Tupac Amaru 207-A<br>
+Mariano Melgar<br>
+Arequipa
+</p>
+
+<a href="https://wa.me/51986192532" class="btn">
+Solicitar Cotización
+</a>
+
+</div>
+
+<div>
+
+<iframe
+src="https://maps.google.com/maps?q=-16.4011269,-71.5027319&z=17&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 MARCOR LABORATORIO DE SUELOS - Todos los derechos reservados.
+</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/51986192532">
+☎
+</a>
 
 </body>
 </html>
