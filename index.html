@@ -375,6 +375,50 @@ height:40px;
 
 /* MOBILE */
 
+.menu-toggle{
+display:none;
+font-size:32px;
+cursor:pointer;
+font-weight:bold;
+color:#111;
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+nav{
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+background:white;
+display:none;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+nav.active{
+display:block;
+}
+
+nav ul{
+flex-direction:column;
+gap:0;
+}
+
+nav ul li{
+border-bottom:1px solid #eee;
+}
+
+nav ul li a{
+display:block;
+padding:18px;
+}
+
+}
+    
 @media(max-width:768px){
 
 .hero h1{
@@ -678,5 +722,18 @@ src="https://maps.google.com/maps?q=-16.4011269,-71.5027319&z=17&output=embed">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+document.querySelectorAll('#menu a').forEach(link => {
+link.addEventListener('click', () => {
+document.getElementById('menu').classList.remove('active');
+});
+});
+
+</script>
 </body>
 </html>
