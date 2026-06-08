@@ -229,6 +229,63 @@ object-fit:cover;
 padding:15px;
 }
 
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.project-card{
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.project-image{
+height:250px;
+overflow:hidden;
+background:#f2f2f2;
+}
+
+.project-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.project-content{
+padding:25px;
+}
+
+.project-content h3{
+font-size:28px;
+margin-bottom:15px;
+color:#111;
+}
+
+.project-content p{
+color:#666;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.project-info{
+display:flex;
+align-items:center;
+gap:10px;
+color:#555;
+margin-bottom:10px;
+font-size:15px;
+}
+    
 /* CLIENTES */
 
 .clients{
@@ -580,36 +637,97 @@ Nuestro objetivo es proporcionar información confiable para el diseño seguro y
 
 </section>
 
-<section id="proyectos">
+<section id="proyectos" class="section">
+    <div class="container">
 
-<div class="container">
+        <div class="section-title">
+            <h2>Nuestros Proyectos</h2>
+            <p>Experiencia comprobada en estudios geotécnicos y control de calidad.</p>
+        </div>
 
-<div class="section-title">
-<h2>Proyectos</h2>
-<p>Experiencia en campo y laboratorio.</p>
-</div>
+        <div class="projects-grid">
 
-<div class="projects">
+            <div class="project-card">
 
-<div class="project">
-<img src="images/calicata.jpg">
-<h4>Estudio de Mecánica de Suelos</h4>
-</div>
+                <div class="project-image">
+                    <img src="images/calicata.jpg" alt="Proyecto Geotécnico">
+                </div>
 
-<div class="project">
-<img src="images/densidad.jpg">
-<h4>Control de Calidad - Densidad In Situ</h4>
-</div>
+                <div class="project-content">
+                    <h3>Estudio de Mecánica de Suelos</h3>
 
-<div class="project">
-<img src="images/proyecto.jpg">
-<h4>Excavación de Calicatas</h4>
-</div>
+                    <p>
+                        Evaluación geotécnica para vivienda multifamiliar
+                        mediante excavación de calicatas y ensayos de laboratorio.
+                    </p>
 
-</div>
+                    <div class="project-info">
+                        📍 Arequipa
+                    </div>
 
-</div>
+                    <div class="project-info">
+                        📅 Marzo 2026
+                    </div>
 
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img src="images/densidad.jpg" alt="Control de Calidad">
+                </div>
+
+                <div class="project-content">
+                    <h3>Control de Calidad de Pavimentos</h3>
+
+                    <p>
+                        Ensayos de densidad in situ para control y
+                        verificación de compactación de subrasante.
+                    </p>
+
+                    <div class="project-info">
+                        📍 Arequipa
+                    </div>
+
+                    <div class="project-info">
+                        📅 Abril 2026
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img src="images/proyecto.jpg" alt="Excavación de Calicatas">
+                </div>
+
+                <div class="project-content">
+                    <h3>Excavación de Calicatas</h3>
+
+                    <p>
+                        Exploración de suelos para caracterización
+                        geotécnica y diseño de cimentaciones.
+                    </p>
+
+                    <div class="project-info">
+                        📍 Arequipa
+                    </div>
+
+                    <div class="project-info">
+                        📅 Mayo 2026
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
 <section>
