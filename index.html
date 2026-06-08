@@ -38,7 +38,7 @@ top:0;
 left:0;
 width:100%;
 background:#ffffff;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
+box-shadow:0 3px 15px rgba(0,0,0,.10);
 z-index:1000;
 }
 
@@ -46,22 +46,23 @@ z-index:1000;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 0;
+padding:25px 0;
 }
 
 .logo{
 display:flex;
 align-items:center;
-gap:10px;
+gap:15px;
 }
 
 .logo img{
-height:55px;
+height:90px;
+transition:0.3s;
 }
 
 .logo span{
 font-weight:700;
-font-size:18px;
+font-size:22px;
 color:#111;
 }
 
@@ -94,6 +95,10 @@ background-position:center;
 display:flex;
 align-items:center;
 color:white;
+}
+
+.hero{
+padding-top:140px;
 }
 
 .hero-content{
@@ -345,8 +350,8 @@ position:fixed;
 right:25px;
 bottom:25px;
 background:#25D366;
-width:65px;
-height:65px;
+width:70px;
+height:70px;
 border-radius:50%;
 display:flex;
 justify-content:center;
@@ -354,8 +359,18 @@ align-items:center;
 font-size:32px;
 text-decoration:none;
 color:white;
-box-shadow:0 5px 15px rgba(0,0,0,.25);
+box-shadow:0 5px 20px rgba(0,0,0,.25);
 z-index:999;
+transition:.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+.whatsapp img{
+width:40px;
+height:40px;
 }
 
 /* MOBILE */
@@ -392,7 +407,6 @@ display:none;
 
 <div class="logo">
 <img src="images/logo.png" alt="MARCOR">
-<span>MARCOR LABORATORIO DE SUELOS</span>
 </div>
 
 <nav>
@@ -613,16 +627,17 @@ Nuestro objetivo es proporcionar información confiable para el diseño seguro y
 
 <h3>Información de Contacto</h3>
 
-<p><strong>Empresa:</strong> MARCOR LABORATORIO DE SUELOS</p>
+<p><strong>Empresa:</strong> MARCOR CONSTRUCTORA S.R.L.</p>
 
-<p><strong>WhatsApp:</strong> 986 192 532</p>
+<p><strong>RUC:</strong> 20606383640</p>
+
+<p><strong>WhatsApp:</strong> 986 192 532 - 993 486 723</p>
 
 <p><strong>Correo:</strong> marcorconstructora@gmail.com</p>
 
 <p><strong>Dirección:</strong><br>
 Calle Tupac Amaru 207-A<br>
-Mariano Melgar<br>
-Arequipa
+Mariano Melgar, Arequipa
 </p>
 
 <a href="https://wa.me/51986192532" class="btn">
@@ -653,8 +668,8 @@ src="https://maps.google.com/maps?q=-16.4011269,-71.5027319&z=17&output=embed">
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/51986192532">
-☎
+<a class="whatsapp" href="https://wa.me/51986192532" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
 </body>
